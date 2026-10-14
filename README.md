@@ -69,4 +69,4 @@ Each session under `BenchmarkResults/<UTC timestamp>/` contains:
 - `statistical-analysis.json` and `.csv`: deterministic 95% bootstrap confidence intervals, coefficient of variation, Web/native mean differences and ratios, and Cliff's delta effect sizes.
 - `validation.json`: run-count, configuration, sample-array, model-load, artifact-hash, source-tree, log-diagnostic, CSV, and summary integrity checks.
 
-Warm-up launches are stored but excluded from aggregation. No outlier is removed automatically. The raw JSON files are the primary observationssummaries are derived data.
+Warm-up launches are stored but excluded from aggregation. No outlier is removed automatically. The raw JSON files are the primary observations and summaries are derived data.
