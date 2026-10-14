@@ -1,0 +1,4 @@
+.DS_Store
+Prototype/build/
+Prototype/node_modules/
+.idea/

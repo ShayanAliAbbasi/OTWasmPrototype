@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "session": "/Users/mac/Development/OpenTwin/Prototypes/Prototype/BenchmarkResults/thesis-osgb-release-headed-20260907",
+  "checks": {
+    "run_files_validated": 66,
+    "unique_run_ids": 66,
+    "unique_timestamps": 66,
+    "artifact_hashes_validated": 5,
+    "source_tree_at_validation": {
+      "file_count": 46,
+      "bytes": 6805868,
+      "sha256": "cd711c21ef4def169108de50e0121d1d694cc9ee6b9b1bf8d444ce51070111c1"
+    },
+    "source_tree_match_required": true,
+    "logs_scanned": 66,
+    "diagnostic_lines": [],
+    "measurement_rows": 60,
+    "summary_metrics_per_target": {
+      "native": 16,
+      "web": 17
+    },
+    "statistical_metrics": 14
+  },
+  "errors": []
+}

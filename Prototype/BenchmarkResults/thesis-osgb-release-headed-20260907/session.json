@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "benchmark_protocol": "opentwin-prototype-v3-release-osgb",
+  "created_utc": "2026-09-07T08:01:09.051775+00:00",
+  "target_selection": "all",
+  "configuration": {
+    "measured_runs": 30,
+    "warmup_runs": 3,
+    "entity_count": 250,
+    "warmup_frames": 60,
+    "measured_frames": 300,
+    "modeling_operations": 60,
+    "plot_iterations": 60,
+    "viewport_width": 1024,
+    "viewport_height": 540,
+    "browser_headless": false,
+    "target_execution_order": [
+      "native",
+      "web"
+    ],
+    "run_order_within_target": "warmup launches followed by measured launches"
+  },
+  "host": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "processor": "arm",
+    "macos_version": "26.6.2",
+    "cpu_brand": "Apple M2 Max",
+    "logical_cpu_count": "12",
+    "physical_memory_bytes": "34359738368",
+    "power_status": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=36438115)\t80%; AC attached; not charging present: true",
+    "chrome_version": "Google Chrome 152.0.7977.77"
+  },
+  "toolchain": {
+    "cmake_version": "cmake version 4.2.0",
+    "native_compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+    "emscripten_version": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.7 (8dc91db45bf96c174531006839472a3924d105aa)",
+    "shell_node_version": "v18.17.0",
+    "python_version": "3.14.4"
+  },
+  "build_configuration": {
+    "native_application_build_type": "Release",
+    "web_application_build_type": "Release",
+    "native_osg_build_type": "Release",
+    "web_osg_build_type": "Release"
+  },
+  "source": {
+    "git_commit": "8addaee67894aea99d129c5ce289d5676f9cc8c4",
+    "prototype_worktree_dirty": true,
+    "prototype_changed_path_count": 22,
+    "prototype_tree": {
+      "file_count": 46,
+      "bytes": 6805868,
+      "sha256": "cd711c21ef4def169108de50e0121d1d694cc9ee6b9b1bf8d444ce51070111c1"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "Prototypes/Prototype/benchmark/assets/complex_surface_zlib.osgb",
+      "bytes": 6493743,
+      "sha256": "2ca60d83be30803270e4249aec9f877cc6cd486543d4287fe049d58fbbb3ec27"
+    },
+    {
+      "path": "Prototypes/Prototype/build/macos/OpenTwinPrototype",
+      "bytes": 18223728,
+      "sha256": "150bb2679955c63022277b45d5c075f33f2a2cf0534f38245095bf025204d76e"
+    },
+    {
+      "path": "Prototypes/Prototype/build/wasm/OpenTwinPrototype.html",
+      "bytes": 3033,
+      "sha256": "0c99d931c7cd9d95ecdd7e706b8254a0372b5f462de600684c9d9a50ed715c0d"
+    },
+    {
+      "path": "Prototypes/Prototype/build/wasm/OpenTwinPrototype.js",
+      "bytes": 226877,
+      "sha256": "c31ccee7e3195ffbc9dc50053e91d2c1521c7945a99f38e627f48b625385d0b9"
+    },
+    {
+      "path": "Prototypes/Prototype/build/wasm/OpenTwinPrototype.wasm",
+      "bytes": 25733055,
+      "sha256": "9a4b6ebd065c5abe9b3c99af5e759cdcdf213a9a366e4b65f3503c392a2d13d3"
+    }
+  ]
+}

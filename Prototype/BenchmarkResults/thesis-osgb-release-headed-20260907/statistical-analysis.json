@@ -1,0 +1,656 @@
+{
+  "schema_version": 1,
+  "method": {
+    "independent_unit": "one measured application launch",
+    "confidence_interval": "independent nonparametric percentile bootstrap",
+    "confidence_level": 0.95,
+    "bootstrap_resamples": 20000,
+    "random_seed": 20260907,
+    "effect_size": "Cliff's delta, web relative to native",
+    "outlier_policy": "No observations removed",
+    "multiple_testing": "No null-hypothesis significance tests are reported."
+  },
+  "comparison_cautions": [
+    "Targets were acquired sequentially (native, then web), not randomized or interleaved.",
+    "Frame samples within a launch are summarized before cross-launch analysis to avoid treating nested frames as independent observations.",
+    "Startup-to-first-frame is application-local; browser navigation and WebAssembly download/instantiation are recorded separately.",
+    "The graphics stacks differ by target, so render results characterize these complete deployment paths rather than WebAssembly CPU cost alone."
+  ],
+  "excluded_cross_target_metrics": {
+    "memory_footprint_bytes": "Native peak RSS and WebAssembly linear-memory allocation are not equivalent measures.",
+    "browser_navigation_to_result_ms": "Browser navigation has no native counterpart in this harness.",
+    "complex_model_payload_bytes": "Payload size is a workload identity check, not a performance measurement."
+  },
+  "metrics": {
+    "startup_to_first_frame_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 336.8252750333333,
+        "median": 325.7865625,
+        "sample_standard_deviation": 28.918741484687338,
+        "coefficient_of_variation_percent": 8.585680359594585,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 327.9862974258333,
+          "upper": 348.13953887750006
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 191.79,
+        "median": 185.45,
+        "sample_standard_deviation": 14.215638547400705,
+        "coefficient_of_variation_percent": 7.412085378487254,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 187.2099166666667,
+          "upper": 197.10674999999998
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -145.0352750333333,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -157.17691474916666,
+          "upper": -134.7104504241667
+        },
+        "web_to_native_mean_ratio": 0.5694050126761415,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.5466787015663667,
+          "upper": 0.5916916106499006
+        },
+        "web_percent_change": -43.05949873238585,
+        "web_percent_change_confidence_interval": {
+          "lower": -45.33212984336333,
+          "upper": -40.830838935009936
+        },
+        "cliffs_delta": -1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "scene_setup_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 41.807169300000005,
+        "median": 42.3384375,
+        "sample_standard_deviation": 1.7805220380768445,
+        "coefficient_of_variation_percent": 4.258891639613697,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 41.133032818333334,
+          "upper": 42.377644332500005
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 77.24,
+        "median": 76.65,
+        "sample_standard_deviation": 2.3461781100628167,
+        "coefficient_of_variation_percent": 3.0375169731522744,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 76.56666666666666,
+          "upper": 78.18333333333334
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 35.43283069999999,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 34.50822799499999,
+          "upper": 36.582005604166675
+        },
+        "web_to_native_mean_ratio": 1.8475300120355191,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.816725367737295,
+          "upper": 1.8847796729698003
+        },
+        "web_percent_change": 84.75300120355192,
+        "web_percent_change_confidence_interval": {
+          "lower": 81.6725367737295,
+          "upper": 88.47796729698003
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "modeling_workload_total_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 3458.939952766667,
+        "median": 3470.7727915,
+        "sample_standard_deviation": 67.5618561046757,
+        "coefficient_of_variation_percent": 1.953253222873548,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 3434.888676789167,
+          "upper": 3482.1047681575
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 5161.7733333333335,
+        "median": 5139.8,
+        "sample_standard_deviation": 105.99432298829554,
+        "coefficient_of_variation_percent": 2.0534478394045883,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 5128.346666666666,
+          "upper": 5201.97675
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 1702.8333805666666,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 1660.7074576666664,
+          "upper": 1749.198471968333
+        },
+        "web_to_native_mean_ratio": 1.4922992025937423,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.4779195587755458,
+          "upper": 1.5077326440450074
+        },
+        "web_percent_change": 49.229920259374225,
+        "web_percent_change_confidence_interval": {
+          "lower": 47.791955877554585,
+          "upper": 50.773264404500736
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "modeling_operation_mean_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 57.64899921277778,
+        "median": 57.84621319166666,
+        "sample_standard_deviation": 1.126030935077928,
+        "coefficient_of_variation_percent": 1.9532532228735475,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 57.24837692929167,
+          "upper": 58.03326960798612
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 86.02955555555556,
+        "median": 85.66333333333333,
+        "sample_standard_deviation": 1.7665720498049278,
+        "coefficient_of_variation_percent": 2.0534478394045905,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 85.47905000000002,
+          "upper": 86.70567916666667
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 28.38055634277778,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 27.69984844020834,
+          "upper": 29.159554136916658
+        },
+        "web_to_native_mean_ratio": 1.4922992025937423,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.4783197004594695,
+          "upper": 1.5077972282717782
+        },
+        "web_percent_change": 49.229920259374225,
+        "web_percent_change_confidence_interval": {
+          "lower": 47.831970045946946,
+          "upper": 50.77972282717782
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "plot_workload_total_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 103.14110693333333,
+        "median": 100.6381665,
+        "sample_standard_deviation": 9.415520311698236,
+        "coefficient_of_variation_percent": 9.128775705096986,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 100.51242614999998,
+          "upper": 106.99267524916668
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 433.01666666666665,
+        "median": 422.70000000000005,
+        "sample_standard_deviation": 21.98025890678259,
+        "coefficient_of_variation_percent": 5.076076880824278,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 425.6865833333334,
+          "upper": 441.18
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 329.8755597333333,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 321.7511283175,
+          "upper": 338.47920108333335
+        },
+        "web_to_native_mean_ratio": 4.1982937699762415,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 4.035944852432438,
+          "upper": 4.337218990604601
+        },
+        "web_percent_change": 319.82937699762414,
+        "web_percent_change_confidence_interval": {
+          "lower": 303.5944852432438,
+          "upper": 333.7218990604601
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "plot_iteration_mean_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 1.7190184488888889,
+        "median": 1.677302775,
+        "sample_standard_deviation": 0.15692533852830395,
+        "coefficient_of_variation_percent": 9.128775705096986,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 1.6752020912083332,
+          "upper": 1.7818613481805554
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 7.216944444444445,
+        "median": 7.045,
+        "sample_standard_deviation": 0.3663376484463765,
+        "coefficient_of_variation_percent": 5.076076880824277,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 7.096388888888888,
+          "upper": 7.3530597222222225
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 5.497925995555556,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 5.362534636166668,
+          "upper": 5.643364597055556
+        },
+        "web_to_native_mean_ratio": 4.1982937699762415,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 4.034932054158169,
+          "upper": 4.3399856177071845
+        },
+        "web_percent_change": 319.82937699762414,
+        "web_percent_change_confidence_interval": {
+          "lower": 303.4932054158169,
+          "upper": 333.9985617707184
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "complex_model_resource_read_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 1.0961112333333332,
+        "median": 1.046292,
+        "sample_standard_deviation": 0.153443348349825,
+        "coefficient_of_variation_percent": 13.99888475581037,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 1.0474750625,
+          "upper": 1.15456138
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 0.6433333333333333,
+        "median": 0.6,
+        "sample_standard_deviation": 0.14781939897267773,
+        "coefficient_of_variation_percent": 22.97710864860276,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 0.5966666666666666,
+          "upper": 0.7
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -0.45277789999999984,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -0.5285763533333333,
+          "upper": -0.3776737658333335
+        },
+        "web_to_native_mean_ratio": 0.5869234013567419,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.5344178238347947,
+          "upper": 0.6464278846253203
+        },
+        "web_percent_change": -41.30765986432581,
+        "web_percent_change_confidence_interval": {
+          "lower": -46.55821761652052,
+          "upper": -35.35721153746797
+        },
+        "cliffs_delta": -0.9244444444444444,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "complex_model_deserialize_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 64.56050826666667,
+        "median": 62.978,
+        "sample_standard_deviation": 4.998867491510785,
+        "coefficient_of_variation_percent": 7.742918427567208,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 63.03092100833334,
+          "upper": 66.5146534325
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 125.67333333333333,
+        "median": 124.8,
+        "sample_standard_deviation": 3.9107220722568345,
+        "coefficient_of_variation_percent": 3.1118153458093745,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 124.61,
+          "upper": 127.27
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 61.11282506666666,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 58.80617163666666,
+          "upper": 63.308960859166675
+        },
+        "web_to_native_mean_ratio": 1.9465976447124707,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.8863834311736392,
+          "upper": 1.9989375473013111
+        },
+        "web_percent_change": 94.65976447124706,
+        "web_percent_change_confidence_interval": {
+          "lower": 88.63834311736392,
+          "upper": 99.8937547301311
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_render_mean_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 2.659129622111111,
+        "median": 2.66090299,
+        "sample_standard_deviation": 0.08866191132122395,
+        "coefficient_of_variation_percent": 3.33424555854612,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 2.6277932927361114,
+          "upper": 2.690571939333333
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 1.8758222222222243,
+        "median": 1.8418333333333359,
+        "sample_standard_deviation": 0.12202435952190241,
+        "coefficient_of_variation_percent": 6.505113228552341,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 1.834333055555558,
+          "upper": 1.920401111111113
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -0.7833073998888869,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -0.835662789163887,
+          "upper": -0.7290127059583316
+        },
+        "web_to_native_mean_ratio": 0.7054271467718032,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.6877238883715299,
+          "upper": 0.7241970300130457
+        },
+        "web_percent_change": -29.457285322819683,
+        "web_percent_change_confidence_interval": {
+          "lower": -31.227611162847012,
+          "upper": -27.58029699869543
+        },
+        "cliffs_delta": -1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_render_median_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 2.6536131833333334,
+        "median": 2.66440625,
+        "sample_standard_deviation": 0.0771010378733404,
+        "coefficient_of_variation_percent": 2.9055115627851236,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 2.6252469787499995,
+          "upper": 2.679727101666667
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 1.9033333333333333,
+        "median": 1.9,
+        "sample_standard_deviation": 0.10580832811669683,
+        "coefficient_of_variation_percent": 5.559106556043616,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 1.8666666666666667,
+          "upper": 1.9416666666666667
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -0.7502798500000001,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -0.7959812145833336,
+          "upper": -0.7034858420833336
+        },
+        "web_to_native_mean_ratio": 0.7172610331029722,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.7018480751288152,
+          "upper": 0.7334335784517134
+        },
+        "web_percent_change": -28.27389668970278,
+        "web_percent_change_confidence_interval": {
+          "lower": -29.81519248711848,
+          "upper": -26.65664215482866
+        },
+        "cliffs_delta": -1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_render_p95_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 3.0357779,
+        "median": 3.0035415,
+        "sample_standard_deviation": 0.10243036629435895,
+        "coefficient_of_variation_percent": 3.3741060666644604,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 3.0020635191666667,
+          "upper": 3.073558605
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 2.5,
+        "median": 2.5,
+        "sample_standard_deviation": 0.12317635241028801,
+        "coefficient_of_variation_percent": 4.927054096411521,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 2.46,
+          "upper": 2.5433333333333334
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -0.5357778999999998,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -0.5928161624999997,
+          "upper": -0.47928317666666725
+        },
+        "web_to_native_mean_ratio": 0.8235121548252922,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.8062339985248761,
+          "upper": 0.8409820965000017
+        },
+        "web_percent_change": -17.648784517470784,
+        "web_percent_change_confidence_interval": {
+          "lower": -19.37660014751239,
+          "upper": -15.901790349999834
+        },
+        "cliffs_delta": -1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_interval_mean_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 16.755294361,
+        "median": 16.77392860999999,
+        "sample_standard_deviation": 0.04963448947658129,
+        "coefficient_of_variation_percent": 0.296231677028078,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 16.7378225075,
+          "upper": 16.77235220805834
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 16.787133333333326,
+        "median": 16.782833333333322,
+        "sample_standard_deviation": 0.051135804463059306,
+        "coefficient_of_variation_percent": 0.30461308341145793,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 16.768433333333327,
+          "upper": 16.804144722222212
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 0.031838972333325444,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 0.006524602049991036,
+          "upper": 0.05627753932499634
+        },
+        "web_to_native_mean_ratio": 1.0019002335409537,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.000389005939107,
+          "upper": 1.0033618072439157
+        },
+        "web_percent_change": 0.19002335409536997,
+        "web_percent_change_confidence_interval": {
+          "lower": 0.03890059391069567,
+          "upper": 0.336180724391566
+        },
+        "cliffs_delta": 0.3688888888888889,
+        "cliffs_delta_magnitude": "medium"
+      }
+    },
+    "frame_interval_p95_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 30,
+        "mean": 18.3739527,
+        "median": 18.4081665,
+        "sample_standard_deviation": 0.13776823327757406,
+        "coefficient_of_variation_percent": 0.7498018283108678,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 18.32547021416667,
+          "upper": 18.421976751666666
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 18.563333333333333,
+        "median": 18.6,
+        "sample_standard_deviation": 0.16078113916950487,
+        "coefficient_of_variation_percent": 0.8661221359463361,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 18.506666666666668,
+          "upper": 18.62
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 0.18938063333333233,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 0.11502458083333532,
+          "upper": 0.2633502333333336
+        },
+        "web_to_native_mean_ratio": 1.0103070164828134,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.0062486961088184,
+          "upper": 1.0143573268727026
+        },
+        "web_percent_change": 1.0307016482813403,
+        "web_percent_change_confidence_interval": {
+          "lower": 0.6248696108818397,
+          "upper": 1.4357326872702636
+        },
+        "cliffs_delta": 0.6688888888888889,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_rate_fps": {
+      "unit": "fps",
+      "preferred_direction": "higher",
+      "native": {
+        "count": 30,
+        "mean": 59.683134807482055,
+        "median": 59.61632623957091,
+        "sample_standard_deviation": 0.176993179810961,
+        "coefficient_of_variation_percent": 0.2965547643934625,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 59.62169676934451,
+          "upper": 59.74635610141544
+        }
+      },
+      "web": {
+        "count": 30,
+        "mean": 59.56996806364806,
+        "median": 59.58469473098014,
+        "sample_standard_deviation": 0.18200197320846673,
+        "coefficient_of_variation_percent": 0.3055263904355381,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 59.50951600477313,
+          "upper": 59.63582851463921
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -0.11316674383399317,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -0.2014320997825601,
+          "upper": -0.023176522016262788
+        },
+        "web_to_native_mean_ratio": 0.9981038739972518,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.996627352265284,
+          "upper": 0.999611193045026
+        },
+        "web_percent_change": -0.1896126002748244,
+        "web_percent_change_confidence_interval": {
+          "lower": -0.33726477347160166,
+          "upper": -0.03888069549740081
+        },
+        "cliffs_delta": -0.3688888888888889,
+        "cliffs_delta_magnitude": "medium"
+      }
+    }
+  }
+}

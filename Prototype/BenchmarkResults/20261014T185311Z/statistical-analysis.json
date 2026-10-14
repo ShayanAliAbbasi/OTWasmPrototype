@@ -1,0 +1,656 @@
+{
+  "schema_version": 1,
+  "method": {
+    "independent_unit": "one measured application launch",
+    "confidence_interval": "independent nonparametric percentile bootstrap",
+    "confidence_level": 0.95,
+    "bootstrap_resamples": 20000,
+    "random_seed": 20260907,
+    "effect_size": "Cliff's delta, web relative to native",
+    "outlier_policy": "No observations removed",
+    "multiple_testing": "No null-hypothesis significance tests are reported."
+  },
+  "comparison_cautions": [
+    "Targets were acquired sequentially (native, then web), not randomized or interleaved.",
+    "Frame samples within a launch are summarized before cross-launch analysis to avoid treating nested frames as independent observations.",
+    "Startup-to-first-frame is application-local; browser navigation and WebAssembly download/instantiation are recorded separately.",
+    "The graphics stacks differ by target, so render results characterize these complete deployment paths rather than WebAssembly CPU cost alone."
+  ],
+  "excluded_cross_target_metrics": {
+    "memory_footprint_bytes": "Native peak RSS and WebAssembly linear-memory allocation are not equivalent measures.",
+    "browser_navigation_to_result_ms": "Browser navigation has no native counterpart in this harness.",
+    "complex_model_payload_bytes": "Payload size is a workload identity check, not a performance measurement."
+  },
+  "metrics": {
+    "startup_to_first_frame_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 367.124166,
+        "median": 367.124166,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 367.124166,
+          "upper": 367.124166
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 223.1,
+        "median": 223.1,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 223.1,
+          "upper": 223.1
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -144.024166,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -144.024166,
+          "upper": -144.024166
+        },
+        "web_to_native_mean_ratio": 0.6076963073032898,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.6076963073032898,
+          "upper": 0.6076963073032898
+        },
+        "web_percent_change": -39.230369269671016,
+        "web_percent_change_confidence_interval": {
+          "lower": -39.230369269671016,
+          "upper": -39.230369269671016
+        },
+        "cliffs_delta": -1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "scene_setup_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 38.786333,
+        "median": 38.786333,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 38.786333,
+          "upper": 38.786333
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 77.0,
+        "median": 77.0,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 77.0,
+          "upper": 77.0
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 38.213667,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 38.213667,
+          "upper": 38.213667
+        },
+        "web_to_native_mean_ratio": 1.9852353662822417,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.9852353662822417,
+          "upper": 1.9852353662822417
+        },
+        "web_percent_change": 98.52353662822418,
+        "web_percent_change_confidence_interval": {
+          "lower": 98.52353662822418,
+          "upper": 98.52353662822418
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "modeling_workload_total_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 3474.221458,
+        "median": 3474.221458,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 3474.221458,
+          "upper": 3474.221458
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 4983.5,
+        "median": 4983.5,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 4983.5,
+          "upper": 4983.5
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 1509.278542,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 1509.278542,
+          "upper": 1509.278542
+        },
+        "web_to_native_mean_ratio": 1.4344220885875376,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.4344220885875376,
+          "upper": 1.4344220885875376
+        },
+        "web_percent_change": 43.44220885875376,
+        "web_percent_change_confidence_interval": {
+          "lower": 43.44220885875376,
+          "upper": 43.44220885875376
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "modeling_operation_mean_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 57.903690966666666,
+        "median": 57.903690966666666,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 57.903690966666666,
+          "upper": 57.903690966666666
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 83.05833333333334,
+        "median": 83.05833333333334,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 83.05833333333334,
+          "upper": 83.05833333333334
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 25.15464236666667,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 25.15464236666667,
+          "upper": 25.15464236666667
+        },
+        "web_to_native_mean_ratio": 1.4344220885875376,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.4344220885875376,
+          "upper": 1.4344220885875376
+        },
+        "web_percent_change": 43.44220885875376,
+        "web_percent_change_confidence_interval": {
+          "lower": 43.44220885875376,
+          "upper": 43.44220885875376
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "plot_workload_total_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 119.608334,
+        "median": 119.608334,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 119.608334,
+          "upper": 119.608334
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 416.7,
+        "median": 416.7,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 416.7,
+          "upper": 416.7
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 297.091666,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 297.091666,
+          "upper": 297.091666
+        },
+        "web_to_native_mean_ratio": 3.483870948323718,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 3.483870948323718,
+          "upper": 3.483870948323718
+        },
+        "web_percent_change": 248.3870948323718,
+        "web_percent_change_confidence_interval": {
+          "lower": 248.3870948323718,
+          "upper": 248.3870948323718
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "plot_iteration_mean_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 1.9934722333333332,
+        "median": 1.9934722333333332,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 1.9934722333333332,
+          "upper": 1.9934722333333332
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 6.944999999999999,
+        "median": 6.944999999999999,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 6.944999999999999,
+          "upper": 6.944999999999999
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 4.951527766666667,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 4.951527766666667,
+          "upper": 4.951527766666667
+        },
+        "web_to_native_mean_ratio": 3.483870948323718,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 3.483870948323718,
+          "upper": 3.483870948323718
+        },
+        "web_percent_change": 248.3870948323718,
+        "web_percent_change_confidence_interval": {
+          "lower": 248.3870948323718,
+          "upper": 248.3870948323718
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "complex_model_resource_read_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 1.090792,
+        "median": 1.090792,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 1.090792,
+          "upper": 1.090792
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 0.8,
+        "median": 0.8,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 0.8,
+          "upper": 0.8
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -0.29079199999999994,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -0.29079199999999994,
+          "upper": -0.29079199999999994
+        },
+        "web_to_native_mean_ratio": 0.7334120528936773,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.7334120528936773,
+          "upper": 0.7334120528936773
+        },
+        "web_percent_change": -26.65879471063227,
+        "web_percent_change_confidence_interval": {
+          "lower": -26.65879471063227,
+          "upper": -26.65879471063227
+        },
+        "cliffs_delta": -1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "complex_model_deserialize_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 65.922,
+        "median": 65.922,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 65.922,
+          "upper": 65.922
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 127.1,
+        "median": 127.1,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 127.1,
+          "upper": 127.1
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 61.178,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 61.178,
+          "upper": 61.178
+        },
+        "web_to_native_mean_ratio": 1.9280361639513364,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.9280361639513361,
+          "upper": 1.9280361639513364
+        },
+        "web_percent_change": 92.80361639513363,
+        "web_percent_change_confidence_interval": {
+          "lower": 92.80361639513362,
+          "upper": 92.80361639513363
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_render_mean_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 2.519275843333333,
+        "median": 2.519275843333333,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 2.519275843333333,
+          "upper": 2.519275843333333
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 1.898333333333336,
+        "median": 1.898333333333336,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 1.898333333333336,
+          "upper": 1.898333333333336
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -0.6209425099999968,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -0.6209425099999968,
+          "upper": -0.6209425099999968
+        },
+        "web_to_native_mean_ratio": 0.7535234136257154,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.7535234136257154,
+          "upper": 0.7535234136257154
+        },
+        "web_percent_change": -24.64765863742846,
+        "web_percent_change_confidence_interval": {
+          "lower": -24.64765863742846,
+          "upper": -24.64765863742846
+        },
+        "cliffs_delta": -1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_render_median_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 2.5778955000000003,
+        "median": 2.5778955000000003,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 2.5778955000000003,
+          "upper": 2.5778955000000003
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 2.0,
+        "median": 2.0,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 2.0,
+          "upper": 2.0
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -0.5778955000000003,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -0.5778955000000003,
+          "upper": -0.5778955000000003
+        },
+        "web_to_native_mean_ratio": 0.7758266384343352,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.7758266384343352,
+          "upper": 0.7758266384343352
+        },
+        "web_percent_change": -22.41733615656648,
+        "web_percent_change_confidence_interval": {
+          "lower": -22.41733615656648,
+          "upper": -22.41733615656648
+        },
+        "cliffs_delta": -1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_render_p95_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 2.866416,
+        "median": 2.866416,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 2.866416,
+          "upper": 2.866416
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 2.3,
+        "median": 2.3,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 2.3,
+          "upper": 2.3
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -0.5664160000000003,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -0.5664160000000003,
+          "upper": -0.5664160000000003
+        },
+        "web_to_native_mean_ratio": 0.802395744372066,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.802395744372066,
+          "upper": 0.802395744372066
+        },
+        "web_percent_change": -19.760425562793404,
+        "web_percent_change_confidence_interval": {
+          "lower": -19.760425562793404,
+          "upper": -19.760425562793404
+        },
+        "cliffs_delta": -1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_interval_mean_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 16.671176249999995,
+        "median": 16.671176249999995,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 16.671176249999995,
+          "upper": 16.671176249999995
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 16.667333333333342,
+        "median": 16.667333333333342,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 16.667333333333342,
+          "upper": 16.667333333333342
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": -0.003842916666652485,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": -0.003842916666652485,
+          "upper": -0.003842916666652485
+        },
+        "web_to_native_mean_ratio": 0.9997694873709555,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 0.9997694873709555,
+          "upper": 0.9997694873709555
+        },
+        "web_percent_change": -0.02305126290444992,
+        "web_percent_change_confidence_interval": {
+          "lower": -0.02305126290444992,
+          "upper": -0.02305126290444992
+        },
+        "cliffs_delta": -1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_interval_p95_ms": {
+      "unit": "ms",
+      "preferred_direction": "lower",
+      "native": {
+        "count": 1,
+        "mean": 17.529041,
+        "median": 17.529041,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 17.529041,
+          "upper": 17.529041
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 17.7,
+        "median": 17.7,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 17.7,
+          "upper": 17.7
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 0.17095899999999986,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 0.17095899999999986,
+          "upper": 0.17095899999999986
+        },
+        "web_to_native_mean_ratio": 1.0097529009145452,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.0097529009145452,
+          "upper": 1.0097529009145452
+        },
+        "web_percent_change": 0.9752900914545171,
+        "web_percent_change_confidence_interval": {
+          "lower": 0.9752900914545171,
+          "upper": 0.9752900914545171
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    },
+    "frame_rate_fps": {
+      "unit": "fps",
+      "preferred_direction": "higher",
+      "native": {
+        "count": 1,
+        "mean": 59.983769891461634,
+        "median": 59.983769891461634,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 59.983769891461634,
+          "upper": 59.983769891461634
+        }
+      },
+      "web": {
+        "count": 1,
+        "mean": 59.99760009599613,
+        "median": 59.99760009599613,
+        "sample_standard_deviation": null,
+        "coefficient_of_variation_percent": null,
+        "bootstrap_mean_confidence_interval": {
+          "lower": 59.99760009599613,
+          "upper": 59.99760009599613
+        }
+      },
+      "comparison": {
+        "web_minus_native_mean": 0.013830204534492907,
+        "web_minus_native_mean_confidence_interval": {
+          "lower": 0.013830204534492907,
+          "upper": 0.013830204534492907
+        },
+        "web_to_native_mean_ratio": 1.000230565777368,
+        "web_to_native_mean_ratio_confidence_interval": {
+          "lower": 1.000230565777368,
+          "upper": 1.000230565777368
+        },
+        "web_percent_change": 0.02305657773680192,
+        "web_percent_change_confidence_interval": {
+          "lower": 0.02305657773680192,
+          "upper": 0.02305657773680192
+        },
+        "cliffs_delta": 1.0,
+        "cliffs_delta_magnitude": "large"
+      }
+    }
+  }
+}

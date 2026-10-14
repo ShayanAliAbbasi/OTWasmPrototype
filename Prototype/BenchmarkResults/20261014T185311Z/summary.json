@@ -1,0 +1,427 @@
+{
+  "schema_version": 1,
+  "outlier_policy": "No observations removed",
+  "targets": {
+    "native": {
+      "startup_to_first_frame_ms": {
+        "count": 1,
+        "mean": 367.124166,
+        "median": 367.124166,
+        "sample_standard_deviation": null,
+        "minimum": 367.124166,
+        "maximum": 367.124166,
+        "p95": 367.124166,
+        "values": [
+          367.124166
+        ]
+      },
+      "scene_setup_ms": {
+        "count": 1,
+        "mean": 38.786333,
+        "median": 38.786333,
+        "sample_standard_deviation": null,
+        "minimum": 38.786333,
+        "maximum": 38.786333,
+        "p95": 38.786333,
+        "values": [
+          38.786333
+        ]
+      },
+      "modeling_workload_total_ms": {
+        "count": 1,
+        "mean": 3474.221458,
+        "median": 3474.221458,
+        "sample_standard_deviation": null,
+        "minimum": 3474.221458,
+        "maximum": 3474.221458,
+        "p95": 3474.221458,
+        "values": [
+          3474.221458
+        ]
+      },
+      "modeling_operation_mean_ms": {
+        "count": 1,
+        "mean": 57.903690966666666,
+        "median": 57.903690966666666,
+        "sample_standard_deviation": null,
+        "minimum": 57.903690966666666,
+        "maximum": 57.903690966666666,
+        "p95": 57.903690966666666,
+        "values": [
+          57.903690966666666
+        ]
+      },
+      "plot_workload_total_ms": {
+        "count": 1,
+        "mean": 119.608334,
+        "median": 119.608334,
+        "sample_standard_deviation": null,
+        "minimum": 119.608334,
+        "maximum": 119.608334,
+        "p95": 119.608334,
+        "values": [
+          119.608334
+        ]
+      },
+      "plot_iteration_mean_ms": {
+        "count": 1,
+        "mean": 1.9934722333333332,
+        "median": 1.9934722333333332,
+        "sample_standard_deviation": null,
+        "minimum": 1.9934722333333332,
+        "maximum": 1.9934722333333332,
+        "p95": 1.9934722333333332,
+        "values": [
+          1.9934722333333332
+        ]
+      },
+      "complex_model_resource_read_ms": {
+        "count": 1,
+        "mean": 1.090792,
+        "median": 1.090792,
+        "sample_standard_deviation": null,
+        "minimum": 1.090792,
+        "maximum": 1.090792,
+        "p95": 1.090792,
+        "values": [
+          1.090792
+        ]
+      },
+      "complex_model_deserialize_ms": {
+        "count": 1,
+        "mean": 65.922,
+        "median": 65.922,
+        "sample_standard_deviation": null,
+        "minimum": 65.922,
+        "maximum": 65.922,
+        "p95": 65.922,
+        "values": [
+          65.922
+        ]
+      },
+      "complex_model_payload_bytes": {
+        "count": 1,
+        "mean": 6493743.0,
+        "median": 6493743.0,
+        "sample_standard_deviation": null,
+        "minimum": 6493743.0,
+        "maximum": 6493743.0,
+        "p95": 6493743.0,
+        "values": [
+          6493743.0
+        ]
+      },
+      "frame_render_mean_ms": {
+        "count": 1,
+        "mean": 2.519275843333333,
+        "median": 2.519275843333333,
+        "sample_standard_deviation": null,
+        "minimum": 2.519275843333333,
+        "maximum": 2.519275843333333,
+        "p95": 2.519275843333333,
+        "values": [
+          2.519275843333333
+        ]
+      },
+      "frame_render_median_ms": {
+        "count": 1,
+        "mean": 2.5778955000000003,
+        "median": 2.5778955000000003,
+        "sample_standard_deviation": null,
+        "minimum": 2.5778955000000003,
+        "maximum": 2.5778955000000003,
+        "p95": 2.5778955000000003,
+        "values": [
+          2.5778955000000003
+        ]
+      },
+      "frame_render_p95_ms": {
+        "count": 1,
+        "mean": 2.866416,
+        "median": 2.866416,
+        "sample_standard_deviation": null,
+        "minimum": 2.866416,
+        "maximum": 2.866416,
+        "p95": 2.866416,
+        "values": [
+          2.866416
+        ]
+      },
+      "frame_interval_mean_ms": {
+        "count": 1,
+        "mean": 16.671176249999995,
+        "median": 16.671176249999995,
+        "sample_standard_deviation": null,
+        "minimum": 16.671176249999995,
+        "maximum": 16.671176249999995,
+        "p95": 16.671176249999995,
+        "values": [
+          16.671176249999995
+        ]
+      },
+      "frame_interval_p95_ms": {
+        "count": 1,
+        "mean": 17.529041,
+        "median": 17.529041,
+        "sample_standard_deviation": null,
+        "minimum": 17.529041,
+        "maximum": 17.529041,
+        "p95": 17.529041,
+        "values": [
+          17.529041
+        ]
+      },
+      "frame_rate_fps": {
+        "count": 1,
+        "mean": 59.983769891461634,
+        "median": 59.983769891461634,
+        "sample_standard_deviation": null,
+        "minimum": 59.983769891461634,
+        "maximum": 59.983769891461634,
+        "p95": 59.983769891461634,
+        "values": [
+          59.983769891461634
+        ]
+      },
+      "memory_footprint_bytes": {
+        "count": 1,
+        "mean": 263405568.0,
+        "median": 263405568.0,
+        "sample_standard_deviation": null,
+        "minimum": 263405568.0,
+        "maximum": 263405568.0,
+        "p95": 263405568.0,
+        "values": [
+          263405568.0
+        ]
+      }
+    },
+    "web": {
+      "startup_to_first_frame_ms": {
+        "count": 1,
+        "mean": 223.1,
+        "median": 223.1,
+        "sample_standard_deviation": null,
+        "minimum": 223.1,
+        "maximum": 223.1,
+        "p95": 223.1,
+        "values": [
+          223.1
+        ]
+      },
+      "scene_setup_ms": {
+        "count": 1,
+        "mean": 77.0,
+        "median": 77.0,
+        "sample_standard_deviation": null,
+        "minimum": 77.0,
+        "maximum": 77.0,
+        "p95": 77.0,
+        "values": [
+          77.0
+        ]
+      },
+      "modeling_workload_total_ms": {
+        "count": 1,
+        "mean": 4983.5,
+        "median": 4983.5,
+        "sample_standard_deviation": null,
+        "minimum": 4983.5,
+        "maximum": 4983.5,
+        "p95": 4983.5,
+        "values": [
+          4983.5
+        ]
+      },
+      "modeling_operation_mean_ms": {
+        "count": 1,
+        "mean": 83.05833333333334,
+        "median": 83.05833333333334,
+        "sample_standard_deviation": null,
+        "minimum": 83.05833333333334,
+        "maximum": 83.05833333333334,
+        "p95": 83.05833333333334,
+        "values": [
+          83.05833333333334
+        ]
+      },
+      "plot_workload_total_ms": {
+        "count": 1,
+        "mean": 416.7,
+        "median": 416.7,
+        "sample_standard_deviation": null,
+        "minimum": 416.7,
+        "maximum": 416.7,
+        "p95": 416.7,
+        "values": [
+          416.7
+        ]
+      },
+      "plot_iteration_mean_ms": {
+        "count": 1,
+        "mean": 6.944999999999999,
+        "median": 6.944999999999999,
+        "sample_standard_deviation": null,
+        "minimum": 6.944999999999999,
+        "maximum": 6.944999999999999,
+        "p95": 6.944999999999999,
+        "values": [
+          6.944999999999999
+        ]
+      },
+      "complex_model_resource_read_ms": {
+        "count": 1,
+        "mean": 0.8,
+        "median": 0.8,
+        "sample_standard_deviation": null,
+        "minimum": 0.8,
+        "maximum": 0.8,
+        "p95": 0.8,
+        "values": [
+          0.8
+        ]
+      },
+      "complex_model_deserialize_ms": {
+        "count": 1,
+        "mean": 127.1,
+        "median": 127.1,
+        "sample_standard_deviation": null,
+        "minimum": 127.1,
+        "maximum": 127.1,
+        "p95": 127.1,
+        "values": [
+          127.1
+        ]
+      },
+      "complex_model_payload_bytes": {
+        "count": 1,
+        "mean": 6493743.0,
+        "median": 6493743.0,
+        "sample_standard_deviation": null,
+        "minimum": 6493743.0,
+        "maximum": 6493743.0,
+        "p95": 6493743.0,
+        "values": [
+          6493743.0
+        ]
+      },
+      "frame_render_mean_ms": {
+        "count": 1,
+        "mean": 1.898333333333336,
+        "median": 1.898333333333336,
+        "sample_standard_deviation": null,
+        "minimum": 1.898333333333336,
+        "maximum": 1.898333333333336,
+        "p95": 1.898333333333336,
+        "values": [
+          1.898333333333336
+        ]
+      },
+      "frame_render_median_ms": {
+        "count": 1,
+        "mean": 2.0,
+        "median": 2.0,
+        "sample_standard_deviation": null,
+        "minimum": 2.0,
+        "maximum": 2.0,
+        "p95": 2.0,
+        "values": [
+          2.0
+        ]
+      },
+      "frame_render_p95_ms": {
+        "count": 1,
+        "mean": 2.3,
+        "median": 2.3,
+        "sample_standard_deviation": null,
+        "minimum": 2.3,
+        "maximum": 2.3,
+        "p95": 2.3,
+        "values": [
+          2.3
+        ]
+      },
+      "frame_interval_mean_ms": {
+        "count": 1,
+        "mean": 16.667333333333342,
+        "median": 16.667333333333342,
+        "sample_standard_deviation": null,
+        "minimum": 16.667333333333342,
+        "maximum": 16.667333333333342,
+        "p95": 16.667333333333342,
+        "values": [
+          16.667333333333342
+        ]
+      },
+      "frame_interval_p95_ms": {
+        "count": 1,
+        "mean": 17.7,
+        "median": 17.7,
+        "sample_standard_deviation": null,
+        "minimum": 17.7,
+        "maximum": 17.7,
+        "p95": 17.7,
+        "values": [
+          17.7
+        ]
+      },
+      "frame_rate_fps": {
+        "count": 1,
+        "mean": 59.99760009599613,
+        "median": 59.99760009599613,
+        "sample_standard_deviation": null,
+        "minimum": 59.99760009599613,
+        "maximum": 59.99760009599613,
+        "p95": 59.99760009599613,
+        "values": [
+          59.99760009599613
+        ]
+      },
+      "memory_footprint_bytes": {
+        "count": 1,
+        "mean": 108789760.0,
+        "median": 108789760.0,
+        "sample_standard_deviation": null,
+        "minimum": 108789760.0,
+        "maximum": 108789760.0,
+        "p95": 108789760.0,
+        "values": [
+          108789760.0
+        ]
+      },
+      "browser_navigation_to_result_ms": {
+        "count": 1,
+        "mean": 12252.584375,
+        "median": 12252.584375,
+        "sample_standard_deviation": null,
+        "minimum": 12252.584375,
+        "maximum": 12252.584375,
+        "p95": 12252.584375,
+        "values": [
+          12252.584375
+        ]
+      }
+    }
+  },
+  "web_to_native_mean_ratio": {
+    "startup_to_first_frame_ms": 0.6076963073032898,
+    "scene_setup_ms": 1.9852353662822417,
+    "modeling_workload_total_ms": 1.4344220885875376,
+    "modeling_operation_mean_ms": 1.4344220885875376,
+    "plot_workload_total_ms": 3.483870948323718,
+    "plot_iteration_mean_ms": 3.483870948323718,
+    "complex_model_resource_read_ms": 0.7334120528936773,
+    "complex_model_deserialize_ms": 1.9280361639513364,
+    "frame_render_mean_ms": 0.7535234136257154,
+    "frame_render_median_ms": 0.7758266384343352,
+    "frame_render_p95_ms": 0.802395744372066,
+    "frame_interval_mean_ms": 0.9997694873709555,
+    "frame_interval_p95_ms": 1.0097529009145452,
+    "frame_rate_fps": 1.000230565777368
+  },
+  "cross_target_ratio_exclusions": {
+    "memory_footprint_bytes": "Native peak RSS and WebAssembly linear-memory allocation are not equivalent measures.",
+    "browser_navigation_to_result_ms": "Browser navigation has no native counterpart in this harness.",
+    "complex_model_payload_bytes": "Payload size is a workload identity check, not a performance measurement."
+  }
+}

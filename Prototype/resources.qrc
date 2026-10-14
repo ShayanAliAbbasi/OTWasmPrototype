@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="Default/Import.png">assets/icons/Default/Import.png</file>
+        <file alias="Default/Export.png">assets/icons/Default/Export.png</file>
+        <file alias="Default/Cuboid.png">assets/icons/Default/Cuboid.png</file>
+        <file alias="Default/Cylinder.png">assets/icons/Default/Cylinder.png</file>
+        <file alias="Default/Sphere.png">assets/icons/Default/Sphere.png</file>
+        <file alias="Default/Torus.png">assets/icons/Default/Torus.png</file>
+        <file alias="Default/Cone.png">assets/icons/Default/Cone.png</file>
+        <file alias="Default/Pyramid.png">assets/icons/Default/Pyramid.png</file>
+        <file alias="Default/BooleanAdd.png">assets/icons/Default/BooleanAdd.png</file>
+        <file alias="Default/BooleanSubtract.png">assets/icons/Default/BooleanSubtract.png</file>
+        <file alias="Default/BooleanIntersect.png">assets/icons/Default/BooleanIntersect.png</file>
+        <file alias="Default/Transform.png">assets/icons/Default/Transform.png</file>
+        <file alias="Default/ChamferEdges.png">assets/icons/Default/ChamferEdges.png</file>
+        <file alias="Default/BlendEdges.png">assets/icons/Default/BlendEdges.png</file>
+        <file alias="Default/AxisCross.png">assets/icons/Default/AxisCross.png</file>
+        <file alias="Default/RemoveFace.png">assets/icons/Default/RemoveFace.png</file>
+        <file alias="Default/Healing.png">assets/icons/Default/Healing.png</file>
+        <file alias="Default/GeometryVisible.png">assets/icons/Default/GeometryVisible.png</file>
+        <file alias="Default/MaterialVisible.png">assets/icons/Default/MaterialVisible.png</file>
+        <file alias="Default/MeshModel.png">assets/icons/Default/MeshModel.png</file>
+        <file alias="Default/python.png">assets/icons/Default/python.png</file>
+        <file alias="Default/Units.png">assets/icons/Default/Units.png</file>
+        <file alias="Images/OpenTwinIcon.png">assets/icons/Images/OpenTwinIcon.png</file>
+    </qresource>
+    <qresource prefix="/benchmark">
+        <file alias="complex_surface_zlib.osgb">benchmark/assets/complex_surface_zlib.osgb</file>
+    </qresource>
+</RCC>

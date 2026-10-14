@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "benchmark_protocol": "opentwin-prototype-v3-release-osgb",
+  "created_utc": "2026-10-14T18:53:17.732298+00:00",
+  "target_selection": "all",
+  "configuration": {
+    "measured_runs": 1,
+    "warmup_runs": 0,
+    "entity_count": 250,
+    "warmup_frames": 60,
+    "measured_frames": 300,
+    "modeling_operations": 60,
+    "plot_iterations": 60,
+    "viewport_width": 1024,
+    "viewport_height": 540,
+    "browser_headless": false,
+    "target_execution_order": [
+      "native",
+      "web"
+    ],
+    "run_order_within_target": "warmup launches followed by measured launches"
+  },
+  "host": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "macos_version": "26.6.2",
+    "cpu_brand": "Apple M2 Max",
+    "logical_cpu_count": "12",
+    "physical_memory_bytes": "34359738368",
+    "power_status": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22282339)\t100%; charged; 0:00 remaining present: true",
+    "chrome_version": "Google Chrome 155.0.8059.40"
+  },
+  "toolchain": {
+    "cmake_version": "cmake version 4.2.0",
+    "native_compiler_version": "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+    "emscripten_version": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.7 (8dc91db45bf96c174531006839472a3924d105aa)",
+    "shell_node_version": "v20.15.0",
+    "python_version": "3.12.7"
+  },
+  "build_configuration": {
+    "native_application_build_type": "Release",
+    "web_application_build_type": "Release",
+    "native_osg_build_type": "Release",
+    "web_osg_build_type": "Release"
+  },
+  "source": {
+    "git_commit": null,
+    "prototype_worktree_dirty": false,
+    "prototype_changed_path_count": 0,
+    "prototype_tree": {
+      "file_count": 238,
+      "bytes": 25517149,
+      "sha256": "124c4953dd745e6fdf4c5aeb965ba5cf06c50c3e6f1c90ba9cee5e5218468f27"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "Prototype/benchmark/assets/complex_surface_zlib.osgb",
+      "bytes": 6493743,
+      "sha256": "2ca60d83be30803270e4249aec9f877cc6cd486543d4287fe049d58fbbb3ec27"
+    },
+    {
+      "path": "Prototype/build/macos/OpenTwinPrototype",
+      "bytes": 18216992,
+      "sha256": "1ced2817e55d9d2b8b22292ccd1e7d1f36ba7f5b84942de36e9fe7fb761746cf"
+    },
+    {
+      "path": "Prototype/build/wasm/OpenTwinPrototype.html",
+      "bytes": 3033,
+      "sha256": "0c99d931c7cd9d95ecdd7e706b8254a0372b5f462de600684c9d9a50ed715c0d"
+    },
+    {
+      "path": "Prototype/build/wasm/OpenTwinPrototype.js",
+      "bytes": 226877,
+      "sha256": "c31ccee7e3195ffbc9dc50053e91d2c1521c7945a99f38e627f48b625385d0b9"
+    },
+    {
+      "path": "Prototype/build/wasm/OpenTwinPrototype.wasm",
+      "bytes": 25733055,
+      "sha256": "b41fed7196d3b0be56968ef5a59263b5c4cb1c710e64318c079ee284d0a68f4a"
+    }
+  ]
+}

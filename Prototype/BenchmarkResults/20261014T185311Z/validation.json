@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "session": "/Users/mac/Development/OTWasmPrototype/Prototype/BenchmarkResults/20261014T185311Z",
+  "checks": {
+    "run_files_validated": 2,
+    "unique_run_ids": 2,
+    "unique_timestamps": 2,
+    "artifact_hashes_validated": 5,
+    "source_tree_at_validation": {
+      "file_count": 238,
+      "bytes": 25517149,
+      "sha256": "124c4953dd745e6fdf4c5aeb965ba5cf06c50c3e6f1c90ba9cee5e5218468f27"
+    },
+    "source_tree_match_required": true,
+    "logs_scanned": 2,
+    "diagnostic_lines": [],
+    "measurement_rows": 2,
+    "summary_metrics_per_target": {
+      "native": 16,
+      "web": 17
+    },
+    "statistical_metrics": 14
+  },
+  "errors": []
+}

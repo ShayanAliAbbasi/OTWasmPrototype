@@ -1,0 +1,12 @@
+{
+  "name": "opentwin-frontend-prototype-benchmark",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Browser benchmark harness for the OpenTwin frontend prototype",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
